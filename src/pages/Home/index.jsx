@@ -2,6 +2,7 @@ import React from "react";
 
 import * as S from "./styles";
 import { Select, Row, Col, DatePicker, Radio, Button } from "antd";
+import { GoLocation } from "react-icons/go";
 
 import { POPULAR_ROUTE_TOPIC } from "./home.data";
 
@@ -40,13 +41,12 @@ function Home(props) {
         <Col
           style={{
             display: "flex",
-            alignItems: "center",
             flexDirection: "column",
           }}
         >
           <h2>VeXeRe - Cam kết hoàn 150% nếu nhà xe không giữ vé</h2>
-          <Row style={{ width: "100%", display: "flex", alignItems: "" }}>
-            <Col span={7} style={{ margin: "0 20px" }}>
+          <S.SearchBookingWrapper>
+            <Col span={7}>
               <Select
                 showSearch
                 placeholder="Vui lòng chọn nơi đi"
@@ -63,7 +63,7 @@ function Home(props) {
                 <Select.Option value="HCM">Tp. Hồ Chí Minh</Select.Option>
               </Select>
             </Col>
-            <Col span={7} style={{ margin: "0 20px" }}>
+            <Col span={7}>
               <Select
                 showSearch
                 placeholder="Vui lòng chọn nơi đi"
@@ -80,24 +80,22 @@ function Home(props) {
                 <Select.Option value="HCM">Tp. Hồ Chí Minh</Select.Option>
               </Select>
             </Col>
-            <Col span={5} style={{ margin: "0 20px" }}>
+            <Col span={6}>
               <DatePicker />
             </Col>
-            <Col span={5}>
+            <Col span={4}>
               <S.Button>Tìm chuyến</S.Button>
             </Col>
-          </Row>
-          <Row>
-            <p style={{ lineHeight: "2", marginRight: "20px" }}>
-              Bạn đặt xe để:
-            </p>
-            <Radio.Group defaultValue="a" size="large">
-              <Radio.Button value="a">Du lich</Radio.Button>
-              <Radio.Button value="b">Ve Que</Radio.Button>
-              <Radio.Button value="c">Cong Tac</Radio.Button>
+          </S.SearchBookingWrapper>
+          <S.MainCheckbox>
+            <p>Bạn đặt xe để:</p>
+            <Radio.Group defaultValue="a">
+              <Radio.Button value="a">Du lịch</Radio.Button>
+              <Radio.Button value="b">Về Quê</Radio.Button>
+              <Radio.Button value="c">Công tác</Radio.Button>
             </Radio.Group>
-            <Button>Gui</Button>
-          </Row>
+            <Button type="primary">Gửi</Button>
+          </S.MainCheckbox>
         </Col>
       </S.Container>
       <S.WrapperContent>

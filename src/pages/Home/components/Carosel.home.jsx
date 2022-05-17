@@ -3,6 +3,8 @@ import { Carousel } from "antd";
 
 function CarouselHome() {
   const contentStyle = {
+    margin: "0 auto",
+    width: "300px",
     height: "160px",
     color: "#fff",
     lineHeight: "160px",
