@@ -66,7 +66,7 @@ const FilterBar = () => {
           min={0}
         />
         <S.FilterbarHeader>
-          <span>200000đ</span>
+          <span>0đ</span>
           <span>200000đ</span>
         </S.FilterbarHeader>
         <S.hCustom>Chọn vị trí ghế</S.hCustom>
